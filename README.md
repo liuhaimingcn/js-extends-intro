@@ -83,12 +83,16 @@ JavaScript严格模式下禁止this关键字指向全局对象。
 如果在一个函数前面带上new来调用，那么背地里会创建一个连接到该函数的prototype成员的新对象，同时this会被绑定到新对象上
 
 ```js
-function add(a, b) {
-  console.log('result:' + (this === global)); // result:true
-  return a + b;
-}
+var Quo = function (status) {
+  this.status = status;
+};
 
-console.log('value:' + add(1, 2)); //value:3
+Quo.prototype.get_status = function () {
+  return this.status;
+};
+
+var myQuo = new Quo('confused');
+console.log('status:' + myQuo.get_status()); // status:confused
 ```
 
 ### apply调用模式
