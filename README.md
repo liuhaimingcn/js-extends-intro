@@ -11,7 +11,7 @@ JavaScript的继承简介
 JavaScript中的每个函数除了声明定义的形式参数，还接收了连个附加的参数：this和arguments。  
 arguments是函数被调用时传递给它的参数列表。
 
-```
+```js
 	function add() {
 	  var sum = 0;
 	  for (var i = 0; i < arguments.length; i++) {
