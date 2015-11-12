@@ -99,7 +99,7 @@ apply方法让我们构建一个参数数组传递给调用函数。它允许我
 	var status =Quo.prototype.get_status.apply(statusObject); // status的值为'A-OK'
 ```
 
-apply和call的区别
+### apply和call的区别
 
 ```js
 	foo.call(this, arg1,arg2,arg3) == foo.apply(this, arguments) == this.foo(arg1, arg2, arg3)
